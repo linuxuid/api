@@ -1,0 +1,41 @@
+body {
+    background: black;
+}
+
+.wrapper {
+    border: 1px solid black;
+    margin: 50px auto;
+    width: 500px;
+    background: whitesmoke;
+}
+
+.wrapper header {
+    padding: 20px;
+}
+
+.wrapper header a {
+    color: blue;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.wrapper header a:hover {
+    color: red;
+    transition: 0.5s;
+}
+
+.wrapper .content {
+    padding: 20px;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.wrapper footer {
+    padding: 20px;
+}
+
+.wrapper footer span {
+    text-align: right;
+    color: red;
+    font-weight: bold;
+}
