@@ -2,6 +2,8 @@
 namespace Controllers;
 
 use Controllers\MainController;
+use Models\Articles\Article;
+use Models\Users\User;
 
 class ArticlesController extends MainController 
 {
@@ -12,8 +14,13 @@ class ArticlesController extends MainController
 
     public function index()
     {
-        $articles = $this->database->query('SELECT * FROM `articles`;');
+        // $articles = Article::findAll();
+        $users = User::findAll();
 
-        $this->view->renderHtml('Articles/index.php', ['articles' => $articles]);
+        echo "<pre>";
+        var_dump($users);
+
+        $this->view->renderHtml('Articles/index.php', ['users' => $users]);
     }
+
 }

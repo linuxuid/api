@@ -18,6 +18,7 @@ foreach ($routes as $pattern => $controllerAndAction) {
 
 if (!$isRouteFound) {
     header('Location: /api/Templates/error/404.php');
+    
 }
 
 $controllerName = $controllerAndAction[0];

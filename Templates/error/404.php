@@ -1,3 +1,6 @@
+<?php http_response_code(404); ?>
+<?php http_response_code() ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +10,7 @@
     <title>Page is not found</title>
 </head>
 <body>
-    <?php http_response_code(404) ?>
+
     Page is not found, please try it again.
 </body>
 </html>

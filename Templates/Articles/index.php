@@ -7,10 +7,6 @@
     <title>In front of you</title>
 </head>
 <body>
-    <?php foreach($articles as $article): ?>
 
-        <?= $article['name'] ?>
-
-    <?php endforeach; ?>
 </body>
 </html>
