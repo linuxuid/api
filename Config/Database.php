@@ -8,7 +8,12 @@ class Database
      */
     private $pdo;
 
-    public function __construct()
+    /**
+     * @var instance
+     */
+    private static $instance;
+
+    private function __construct()
     {
         $databaseOptions = (require __DIR__ . '/Connection.php')['db'];
 
@@ -35,6 +40,16 @@ class Database
 
         return $stmt->fetchAll(\PDO::FETCH_CLASS, $className);
     }
+
+    /** Singleton pattern, only one object of class which available everywhere */
+    public static function getInstance() : self  
+    {
+        if(self::$instance == null):
+            self::$instance = new self();
+        endif;
+            return self::$instance;
+    }
+
 }
 
 

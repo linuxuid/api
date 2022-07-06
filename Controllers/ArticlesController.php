@@ -12,15 +12,13 @@ class ArticlesController extends MainController
         parent::__construct();
     }
 
-    public function index()
-    {
-        // $articles = Article::findAll();
-        $users = User::findAll();
-
-        echo "<pre>";
-        var_dump($users);
-
-        $this->view->renderHtml('Articles/index.php', ['users' => $users]);
-    }
-
 }
+
+/**
+ *      $article = new Article();
+        $article->setName('Новый статья');
+        $article->setText('Новый текста');
+        $article->authorId = '1';
+        $article->createdAt = date(c);
+        $article->save();
+ */

@@ -9,7 +9,7 @@ class Article extends ActiveRecord
     protected $id;
 
     /** @var int */
-    protected $authorId;
+    private $authorId;
 
     /** @var string */
     private $name;
@@ -18,7 +18,33 @@ class Article extends ActiveRecord
     private $text;
 
     /** @var string */
-    protected $createdAt;
+    private $createdAt;
+
+
+    /**
+    * @return int
+    */
+    public function getId() : int 
+    {
+        return $this->id;
+    }
+        
+
+    /**
+     * @param int
+     */
+    public function setAuthorId(int $num)
+    {
+        $this->authorId = $num;
+    }
+
+    /**
+     * @param string
+     */
+    public function setCreatedAt(string $date)
+    {
+        $this->createdAt = $date;
+    }
 
     /**
      * @return string
@@ -29,6 +55,14 @@ class Article extends ActiveRecord
     }
 
     /**
+     * @param $name 
+     */
+    public function setName(string $name)
+    {
+        $this->name = $name;
+    }
+
+    /**
      * @return string
      */
     public function getText() : string 
@@ -36,6 +70,17 @@ class Article extends ActiveRecord
         return $this->text;
     }
 
+    /**
+     * @param $text
+     */
+    public function setText(string $text) 
+    {
+        $this->text = $text;
+    }
+
+    /**
+     * @return string
+     */
     public static function getTableName() : string 
     {
         return 'articles';

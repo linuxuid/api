@@ -20,6 +20,7 @@ body {
     color: blue;
     font-size: 20px;
     text-decoration: none;
+    float: right;
 }
 
 .wrapper .top a:hover {
