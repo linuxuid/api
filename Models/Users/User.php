@@ -2,6 +2,7 @@
 namespace Models\Users;
 
 use Config\Database;
+use Exceptions\AvailableUsersExceptions;
 use Exceptions\InvalidArgumentException;
 use Exceptions\CheckEmailException;
 use Exceptions\CheckPasswordException;
@@ -24,6 +25,9 @@ class User extends ActiveRecord
 
     /** @var string */
     protected $role;
+
+    /** @var string */
+    protected $status;
 
     /** @var string */
     protected $passwordHash;
@@ -58,6 +62,30 @@ class User extends ActiveRecord
     public function getEmail() : string
     {
         return $this->email;
+    }
+
+    /**
+     * @return int
+     */
+    public function getIsConfirmed() : int
+    {
+        return $this->isConfirmed;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRole() : string 
+    {
+        return $this->role;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStatus() : string 
+    {
+        return $this->status;
     }
 
     /**
@@ -139,7 +167,11 @@ class User extends ActiveRecord
         /** check field is empty */
         if(empty($loginData['email']))
         {
-            throw new InvalidArgumentException('field email is empty');
+            throw new InvalidArgumentException();
+        }
+
+        if(!filter_var($loginData['email'], FILTER_VALIDATE_EMAIL)) {
+            throw new InvalidArgumentException('email is invalid you should write correct email');
         }
 
         if(empty($loginData['password'])) 
@@ -343,6 +375,7 @@ class User extends ActiveRecord
 
     /**
      * Confirm user
+     * @return void
      */
     public function activate() : void 
     {
@@ -350,6 +383,29 @@ class User extends ActiveRecord
         $this->save();
     }
 
+    /**
+     * Ban
+     * @return void
+     */
+    public function banStatusUser() : void 
+    {
+        $this->status = 'banned';
+        $this->save();
+    }
+
+    /**
+     * Unban
+     * @return void
+     */
+    public function unbanStatusUser() : void 
+    {
+        $this->status = 'available';
+        $this->save();
+    }
+
+    /**
+     * @return string
+     */
     public static function getTableName(): string
     {
         return 'users';

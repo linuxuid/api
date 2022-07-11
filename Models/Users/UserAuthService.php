@@ -2,6 +2,7 @@
 namespace Models\Users;
 
 use Models\Users\User;
+use \View\View;
 
 class UserAuthService 
 {

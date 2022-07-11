@@ -1,24 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documents</title>
-</head>
-<body>
+<?php include __DIR__ . '/../Layouts/header.php' ?>
+<link rel="stylesheet" href="/api/Public/styles/auth/reset.css"> 
 
-<?php if(isset($errors)): ?>
 
-<?= $errors ?>
+<main>
+    <div class="content">
 
-<?php endif; ?>
-    <h2>Please write your email to reset password</h2>
-    <form action="/api/forget-password/" method="POST">
-        <label>Email: <input type="email" name="user_email"></label>
-        <button>
-            send email
-        </button>
-    </form>
-</body>
-</html>
+       
+        <form action="/api/forget-password/" method="POST">
+        <?php if(isset($errors)): ?>
+            <div class="errors">
+                <span><?= $errors ?></span>
+            </div> 
+        <?php endif; ?>
+        <h2>reset password</h2>
+            <label>
+                Email: 
+            </label>
+            <input type="email" name="user_email">
+            <button>
+                send email
+            </button>
+        </form>
+    </div>
+</main>
+
+
+<?php include __DIR__ . '/../Layouts/footer.php' ?>

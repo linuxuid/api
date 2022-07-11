@@ -1,39 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-</head>
-<body>
+<?php include __DIR__ . '/../Layouts/header.php' ?>
+<link rel="stylesheet" href="/api/Public/styles/auth/register.css">       
+<link rel="stylesheet" href="/api/Public/styles/homepage/present.css">
 
-<?php if(empty($user)): ?> 
-    <h1>
-        Register
-    </h1>
 
-    <?php if(isset($errors)): ?>
-        <?= $errors ?>
-    <?php endif; ?>
-
+<main>
+    <div class="content">
     <form action="/api/stored-data/" method="POST">
-        <label> Nickname: <input type="text" name="nickname"> </label>
-        <label> Email: <input type="email" name="email"></label>
-        <label> Password: <input type="password" name="password"></label>
+        <?php if(isset($errors)): ?>
+            <div class="errors">
+                <span><?= $errors ?></span>
+            </div> 
+        <?php endif; ?>
+
+        <?php if(empty($user)): ?> 
+            <h1>Register</h1>
+
+        <label> 
+            Nickname: 
+        </label> 
+        <input type="text" name="nickname"> 
+
+        <label> 
+            Email: 
+        </label>
+        <input type="email" name="email">
+
+        <label> 
+            Password: 
+        </label>
+        <input type="password" name="password">
         <input type="hidden" name="id"> 
+        <a href="/api/login/">are you already registered?</a>
         <button>
             SUBMIT
         </button>
     </form>
-<?php else: ?>
-    вы залогинены
-<?php endif; ?> 
+    <?php else: ?>  
+                <div class="logged">
+                    <p>You are logged in already, you can use this links:</p>
+                        <div class="links">
+                            <a href="#">link1</a>
+                            <a href="#">link1</a>
+                            <a href="#">link1</a>
+                            <a href="#">link1</a>
+                        </div>
+                </div>
+            <?php endif; ?>
+    </div>
+</main>
 
-<form action="/api/logout/" method="POST">
-        <button>
-                logout
-        </button>
-    </form>
-</body>
-</html>
+
+<?php include __DIR__ . '/../Layouts/footer.php' ?>

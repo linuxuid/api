@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/api/Public/styles/homepage/greets.css">
-    <title>Who are you?</title>
+    <title>Bird in Flight - read me.</title>
 </head>
 <body>
     <div class="wrapper">
@@ -30,7 +30,7 @@
             Prioritize, choose your life purpose and go! When you can't do something, and you don't know how to resolve a problem, use youtube and google, you need to become more self sufficient, study how to resolve any problem in your own! You have to know a lot if we are talking about hacking, if you want to get into the elite, it depends on your ambition, but you don't have to be there to enjoy it. Just love what you do, and strive become better then you was yesterday, it's life style, study a lot, and feel life. Your inner peace is connected with the realization of your desires. No one took the path to professional programming or hacking easily, everyone who i know is learning a lot and everyone has faced challenges that require you to be more patient and overcome them. When something wrong and they did not know what to do, they start reading more and more, they are looking for how to solve it, and again try to do it. And again, again, until they get it. This is refers to life in general. You meet a problem, and don't go ahead until you don't solve it. Be in the crowd, refuse honors. Just observe how everything works, become a smarter that you was yesterday. Don't be like everyone else, be smarter and know what you want to achieve! But, if you don't believe in yourself and are convinced you won't, accept your fate. You can choose and office job, bake pies and cakes, and watch life pass you by.
         </div>
         <div class="top">
-            <a href="/api/in-front-of-you/" target="_blank">Come in</a>
+            <a href="/api/main-page/" target="_blank">Come in</a>
         </div>
     </div>
 </body>

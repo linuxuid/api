@@ -3,9 +3,10 @@
 return [
 
     /** HomepageController */
-    '~^$~' => [\Controllers\HomePageController::class, 'index'],
-    '~^in-front-of-you/$~' => [\Controllers\HomePageController::class, 'create'],
-    '~^in-front-of-you/(\d+)$~' => [\Controllers\HomePageController::class, 'edit'],
+    '~about-me/~' => [\Controllers\HomePageController::class, 'description'],
+    '~^read-me/$~' => [\Controllers\HomePageController::class, 'index'],
+    '~^main-page/$~' => [\Controllers\HomePageController::class, 'create'],
+    '~whoami/~' => [\Controllers\HomePageController::class, 'moreAboutMe'],
    
     /** ArticleController */
     '~^delete/(\d+)$~' => [\Controllers\HomePageController::class, 'delete'],
@@ -35,6 +36,11 @@ return [
     '~^forget-password/$~' => [\Controllers\Personal\UsersAccountController::class, 'createResetPasswordAttribute'],
     '~^restore-password/(\d+)/confirm/(.+)$~' => [\Controllers\Personal\UsersAccountController::class, 'confirmResetPasswordAttribute'],
     '~set-password/verify/~' => [\Controllers\Personal\UsersAccountController::class, 'setNewPasswordAttribute'],
+
+    /** Admin Panel */
+    '~^show-users/$~' => [\Controllers\Admin\AdminPanelController::class, 'index'],
+    '~^change-status-user-to-ban/(\d+)/$~' => [\Controllers\Admin\AdminPanelController::class, 'banUser'],
+    '~change-status-user-to-unban/(\d+)/~' => [\Controllers\Admin\AdminPanelController::class, 'unbanUser']
 ];
 
 ?>

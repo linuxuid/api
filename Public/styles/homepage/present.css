@@ -1,20 +1,136 @@
-/* body {
+body {
     margin: 0;
     color: white;
-    background-color: black;
-} */
+    background-color: rgb(34, 30, 30);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 .wrapper {
     width: 100%;
 }
 
-.wrapper header {
+/* header */
+header {
     padding: 20px;
-    position: relative;
 }
 
-.wrapper header a {
+header .above_top {
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header .top {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+header .menu a {
+    font-size: 14px;
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    margin: -1px;
+}
+
+header .menu {
+    border-bottom: 1px solid white;
+}
+
+main {
+    height: 100%;
+}
+
+main .content {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main .content .about {
+    color: greenyellow;
+}
+
+main .content .about_desc {
+    font-size: 14px;
+}
+
+main .content .explain, main .content .contacts {
+    color: greenyellow;
+}
+
+main .content .contacts {
+    border-top: dotted;
+}
+
+main .content .passage {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+main .content .passage a {
+    font-size: 14px;
+    color: rgb(222, 7, 7);
+}
+
+main .content .links {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
-    border: 1px solid white;
+    
 }
+
+main .content .footer_block {
+    height: 140px;
+}
+
+main .content .footer_block .links a {
+    text-decoration: none;
+    color: rgb(0, 255, 238);
+    font-size: 15px;
+    margin-bottom: 5px;
+    width: 50px;
+}
+
+main .content .footer_block .links a:hover {
+    color: springgreen;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+main .content .footer_block .my_links {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 123px;
+    left: 100px;
+    width: 80px;
+}
+
+main .content .footer_block .my_links a {
+    color: rgb(25, 239, 68);
+    font-size: 15px;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+main .content .footer_block .my_links a:hover {
+    color: rgb(0, 195, 255);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+main .content .footer_block .desc_links {
+    position: relative;
+    bottom: 50px;
+    border-top: dotted greenyellow;;
+}
+
+/* footer */
+/* footer {
+    padding-top: 200px;
+    padding-left: 20px;
+}
+
+footer span {
+    font-size: 13px;
+} */

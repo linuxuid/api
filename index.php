@@ -2,6 +2,7 @@
 error_reporting(E_ALL); 
 ini_set('display_errors', 'on');
 
+try {
 require_once __DIR__ . '/Autoload/Autoload.php'; // Use autoload
 
 $route = $_GET['route'] ?? '';
@@ -17,7 +18,8 @@ foreach ($routes as $pattern => $controllerAndAction) {
 }
 
 if (!$isRouteFound) {
-    echo 'Page is not found';
+    $view = new \View\View(__DIR__ . '/Templates/error/');
+    $view->renderHtml('404.php', [], 403) ;
 }
 
 unset($matches[0]);
@@ -27,4 +29,12 @@ $actionName = $controllerAndAction[1];
 
 $controller = new $controllerName();
 $controller->$actionName(...$matches);
+
+} catch(\Exceptions\AvailableUsersExceptions $e) {
+    $view = new \View\View(__DIR__ . '/Templates/error/');
+    $view->renderHtml('banned.php', ['error' => $e->getMessage()], 403) ;
+} catch (ArgumentCountError){
+    return null;
+}
+
 ?>
