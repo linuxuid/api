@@ -19,7 +19,7 @@ foreach ($routes as $pattern => $controllerAndAction) {
 
 if (!$isRouteFound) {
     $view = new \View\View(__DIR__ . '/Templates/error/');
-    $view->renderHtml('404.php', [], 403) ;
+    return $view->renderHtml('404.php', [], 403) ;
 }
 
 unset($matches[0]);

@@ -128,6 +128,36 @@ abstract class ActiveRecord
     }
 
     /**
+     * @param int
+     * @return int
+     */
+    public static function getPageCount(int $itemsPage): int {
+        $database = Database::getInstance();
+        $result = $database->query('SELECT COUNT(*) AS cnt FROM ' . static::getTableName() . ';');
+        return ceil($result[0]->cnt / $itemsPage);
+    }
+
+    /**
+     * @param int
+     * @param int
+     * @return array
+     */
+    public static function getPage(int $pageNum, int $itemsPage): array
+    {
+        $database = Database::getInstance();
+        return $database->query(
+            sprintf(
+                'SELECT * FROM `%s` ORDER BY id DESC LIMIT %d OFFSET %d;',
+                static::getTableName(),
+                $itemsPage,
+                ($pageNum - 1) * $itemsPage
+            ),
+            [],
+            static::class
+        );
+    }
+
+    /**
      * @return array[]
      */
     private function conversionToDbFormat() : array 

@@ -1,0 +1,74 @@
+main .content {
+    min-height: calc(100vh - 80px);
+}
+
+main .content .comment_block form {
+    width: 225px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+main .content .comment_block form h4 {
+    text-align: center;
+    margin-left: 12px;
+}
+
+main .content .comment_block form label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+main .content .comment_block form input {
+    padding: 10px;
+    width: 200px;
+}
+
+main .content .comment_block form textarea {
+    width: 218px;
+    height: 150px;
+}
+
+main .content .comment_block form button {
+    padding: 5px;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+
+main .content .comment_block form button:hover {
+    background: aquamarine;
+    color: red;
+    transition: 0.5s;
+}
+
+main .content .comment_block .comms {
+    border-bottom: 1px solid rgb(54, 48, 48);
+    margin-top: 30px;
+}
+
+main .content .comment_block p {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+main .content .comment_block p .designations {
+    color: aquamarine;
+    font-size: 14px;
+}
+
+main .content .comment_block p .dateVal {
+    color: orange;
+    font-size: 14px;
+}
+
+main .content .comment_block p .value {
+    font-size: 14px;
+    color: rgb(160, 82, 233);
+}
+

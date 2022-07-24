@@ -150,6 +150,7 @@ class User extends ActiveRecord
         $user->email = $usersData['email'];
         $user->passwordHash = password_hash($usersData['password'], PASSWORD_DEFAULT);
         $user->isConfirmed = 0;
+        $user->status = 'available';
         $user->role = 'user';
         $user->authToken = sha1(random_bytes(100)) . sha1(random_bytes(100));
         $user->createdAt = date("Y-m-d H:i:s");
@@ -324,7 +325,7 @@ class User extends ActiveRecord
         $users = UserAuthService::getUserByToken();
 
         if(empty($emailAttribute['old_email'])){
-            throw new CheckEmailException('');
+            throw new CheckEmailException('field email is empty');
         }
 
         $user = User::findUniqueValues('email', $emailAttribute['old_email']);

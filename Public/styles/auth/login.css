@@ -1,3 +1,7 @@
+main .content {
+        min-height: calc(82vh - 80px);
+}
+
 main .content .errors {
     width: 180px;
     background: rgba(241, 6, 6, 0.5);
@@ -12,14 +16,26 @@ main .content .errors {
 }
 
 main .content form {
-    width: 400px;
+    width: 300px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    right: 25px;
     margin-top: 200px;
+}
+
+
+main .content form input {
+    width: 202px;
 }
 
 main .content form h1 {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    left: 50px;
+    width: 150px;
 }
 
 main .content form label, main .content input, main .content button {
@@ -30,6 +46,7 @@ main .content form label, main .content input, main .content button {
 main .content label {
     display: block;
     margin-top: 10px;
+    width: 80px;
 }
 
 main .content a {
@@ -41,6 +58,7 @@ main .content a {
     font-size: 14px;
     color: rgb(118, 213, 235);
     text-decoration: none;
+    width: 130px;
 }
 
 main .content a:hover {
@@ -66,4 +84,3 @@ main .content .logged .links {
     display: flex;
     flex-direction: column;
 }
-

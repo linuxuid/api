@@ -1,7 +1,7 @@
 body {
     margin: 0;
     color: white;
-    background-color: rgb(34, 30, 30);
+    background-color: rgb(0, 0, 0);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -24,11 +24,39 @@ header .top {
     margin-bottom: 10px;
 }
 
+/* if user logged in */
+header .menu form {
+    float: right;
+}
+
+header .menu form button {
+    border: none;
+    background-color: rgb(34, 30, 30);
+    cursor: pointer;
+    color: aquamarine;
+}
+
+header .menu .user {
+    margin-left: 275px;
+    font-size: 14px;
+    color: rgb(209, 17, 17);
+}
+
+header .menu form button:hover {
+    color: rgb(211, 57, 57);
+}
+
 header .menu a {
     font-size: 14px;
     color: rgb(255, 0, 0);
     text-decoration: none;
     margin: -1px;
+}
+
+header .menu a:hover {
+    color: rebeccapurple;
+    text-decoration: underline;
+    transition: 0.5s;
 }
 
 header .menu {
@@ -43,6 +71,7 @@ main .content {
     width: 95%;
     margin-left: auto;
     margin-right: auto;
+    min-height: calc(85vh - 80px);
 }
 
 main .content .about {
@@ -81,6 +110,7 @@ main .content .links {
 
 main .content .footer_block {
     height: 140px;
+    border-bottom: 5px green dotted;
 }
 
 main .content .footer_block .links a {
@@ -101,9 +131,10 @@ main .content .footer_block .my_links {
     display: flex;
     flex-direction: column;
     position: relative;
-    bottom: 123px;
+    bottom: 113px;
     left: 100px;
     width: 80px;
+    
 }
 
 main .content .footer_block .my_links a {
@@ -119,12 +150,15 @@ main .content .footer_block .my_links a:hover {
     transition: 0.3s;
 }
 
-main .content .footer_block .desc_links {
-    position: relative;
-    bottom: 50px;
-    border-top: dotted greenyellow;;
+footer {
+    background: black;
+    padding: 20px;
+    margin-top: 29px;
 }
 
+footer span {
+    font-size: 14px;
+}
 /* footer */
 /* footer {
     padding-top: 200px;

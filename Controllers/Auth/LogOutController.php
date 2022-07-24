@@ -14,6 +14,6 @@ class LogOutController extends MainController
     public function exit()
     {
         UserAuthService::deleteToken();
-        header('Location: /api');
+        header('Location: /api/read-me/');
     }
 }

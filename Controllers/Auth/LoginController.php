@@ -24,7 +24,7 @@ class LoginController extends MainController
             try{
                 $user = User::login($_REQUEST);
                 UserAuthService::createToken($user);
-                header('Location: /api');
+                header('Location: /api/read-me/');
                 exit();
             } catch(InvalidArgumentException $e){
                 return $this->view->renderHtml('Auth/login.php', ['errors' => $e->getMessage()]);

@@ -2,12 +2,12 @@ body {
     background: black;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .wrapper {
     border: 1px solid black;
-    margin: 50px auto;
+    margin: 5px auto;
     width: 500px;
     /* background: whitesmoke; */
 }
@@ -21,10 +21,13 @@ body {
     font-size: 20px;
     text-decoration: none;
     float: right;
+    position: relative;
+    bottom: 30px;
 }
 
 .wrapper .top a:hover {
     color: rgb(195, 32, 32);
+    text-decoration: underline;
     transition: 0.5s;
 }
 
@@ -46,4 +49,9 @@ body {
     text-align: right;
     color: red;
     font-weight: bold;
+}
+
+.wrapper .content h2 {
+    text-align: center;
+    border-bottom: 1px solid white;
 }

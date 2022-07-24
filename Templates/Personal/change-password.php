@@ -1,30 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<?php if(!empty($errors)): ?>
+<?php include __DIR__ . '/../Layouts/header.php' ?>
+<link rel="stylesheet" href="/api/Public/styles/auth/login.css">
+<link rel="stylesheet" href="/api/Public/styles/account/resetpass.css">
 
-<?= $errors ?>
-
-<?php endif; ?>
-
+    <main>
+        <div class="content">
 <?php if(!empty($user)): ?> 
     <form action="/api/change-password/" method="POST">
-        <label>Old password: <input type="password" name="old_password"></label>
-        <label>New password: <input type="password" name="new_password"></label>
-        <label>Confrim: <input type="password" name="confirm"></label>
+         <?php if(isset($errors)): ?>
+            <div class="errors">
+                <span><?= $errors ?></span>
+            </div> 
+        <?php endif; ?>
+        <label>Old password: </label>
+        <input type="password" name="old_password">
+       
+        <label>New password: </label>
+        <input type="password" name="new_password">
+       
+        <label>Confrim: </label>
+        <input type="password" name="confirm">
         <button>
             CHANGE
         </button>
-    </form>
-<?php else: ?>
-    your are not logged in
+            </form>
+        <?php else: ?>
+            your are not logged in
 
-<?php endif; ?>
-</body>
-</html>
+        <?php endif; ?>
+        </div>
+    </main>
+
+<?php include __DIR__ . '/../Layouts/footer.php' ?>

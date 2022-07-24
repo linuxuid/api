@@ -1,0 +1,14 @@
+main .content form button {
+    margin-top: 5px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    background: black;
+    cursor: pointer;
+    border: 1px solid ghostwhite;
+}
+
+main .content form button:hover {
+    background: rgb(221, 155, 33);
+    transition: 0.5s;
+}

@@ -45,15 +45,11 @@
                             <a href="#" target="_blank">Email</a>
                             <a href="#" target="_blank">Telegram</a>
                         </div>
-                        <div class="desc_links">
-                            <span class="explain">About contact</span>
-                            <br>
-                            <span class="about_desc">
-                                I prefer to contact in Telegram, if you have any questions and something else just text me. Email and PGP is not necessary. If you are programmer, and you have checked my code and you can give me some advice on how i can make it better, I'll listen to you with pleasure. Please feel free and contact me.
-                            </span> 
-                        </div>
                     </div>
                 </div>
             </main>
-
-<?php include __DIR__ . '/../Layouts/footer.php' ?>
+            <footer class="present_footer">
+                <span>
+                © 2022 a non-commercial website with no specific purpose and maybe I can come up with something better than the simple code in the background but like I said I don't like the front-end and prefer the back-end and I think that's what we live for to do what we like, because it's your life and you have to choose your own path.
+                </span>
+            </footer>

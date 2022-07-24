@@ -43,8 +43,6 @@ class RegisterController extends MainController
                     'userId' => $users->getLastId(),
                     'code' => $code,
                 ]);
-
-                return $this->view->renderHtml('Auth/success.php');
             }
         }
     }

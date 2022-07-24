@@ -1,0 +1,19 @@
+main .content .notes .note {
+    margin-top: 30px;
+    font-size: 16px;
+    color: aquamarine;
+    border-top: 3px dotted aqua;
+}
+
+main .content .notes .under_notes a{
+    font-size: 14px;
+    color: rgb(246, 21, 21);
+    text-decoration: none;
+}
+
+main .content .notes .under_notes a:hover{
+    font-size: 14px;
+    color: rgb(74, 204, 252);
+    text-decoration: underline;
+    transition: 0.5s;
+}

@@ -1,7 +1,6 @@
 <?php 
 
 return [
-
     /** HomepageController */
     '~about-me/~' => [\Controllers\HomePageController::class, 'description'],
     '~^read-me/$~' => [\Controllers\HomePageController::class, 'index'],
@@ -40,7 +39,14 @@ return [
     /** Admin Panel */
     '~^show-users/$~' => [\Controllers\Admin\AdminPanelController::class, 'index'],
     '~^change-status-user-to-ban/(\d+)/$~' => [\Controllers\Admin\AdminPanelController::class, 'banUser'],
-    '~change-status-user-to-unban/(\d+)/~' => [\Controllers\Admin\AdminPanelController::class, 'unbanUser']
+    '~change-status-user-to-unban/(\d+)/~' => [\Controllers\Admin\AdminPanelController::class, 'unbanUser'],
+
+    /** anonymity */
+    '~anonymity-topic/~' => [\Controllers\Anonymity\AnonymityController::class, 'index'],
+
+    /** guestbook */
+    '~guest-book/~' => [\Controllers\Guest\GuestBookController::class, 'create'],
+    '~guest-book-store/~' => [\Controllers\Guest\GuestBookController::class, 'store'],
 ];
 
 ?>
