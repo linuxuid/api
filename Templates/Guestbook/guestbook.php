@@ -8,6 +8,10 @@
             <span class="about_desc">
                 you can leave your comment below and I can figure out how I can make things better, or just write what you want, doesn't matter.
             </span> 
+<br><br>
+            <?php 
+            
+            ?>
 
             <!-- comment block begin -->
             <div class="comment_block">

@@ -47,6 +47,7 @@ return [
     /** guestbook */
     '~guest-book/~' => [\Controllers\Guest\GuestBookController::class, 'create'],
     '~guest-book-store/~' => [\Controllers\Guest\GuestBookController::class, 'store'],
+    '~algorithms~' => [\Controllers\Guest\GuestBookController::class, 'algorithms']
 ];
 
 ?>

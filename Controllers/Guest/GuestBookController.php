@@ -34,4 +34,8 @@ class GuestBookController extends MainController
             }
         }
     }
+
+    public function algorithms(){
+        return $this->view->renderHtml('Guestbook/algo.php');
+    }
 }
